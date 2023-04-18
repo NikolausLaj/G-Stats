@@ -37,4 +37,4 @@ The header of the CSV-File contains the first and last name of the player.
 | :------:  | :------: | :--------: | ------------- |---------- | ---------- | --- |
 | Monsta    | Mane     | 0          | 0             | -         | -          | ... |
 | Sending   | Simba    | 2          | 14            | 2         | 12         | ... |
-| Hermione  | Granger  | 1          | 3             | 3         | -          | ... |
+| Afro      | Jack     | 1          | 3             | 3         | -          | ... |
