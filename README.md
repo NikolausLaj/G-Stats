@@ -30,7 +30,11 @@ First it will be implemented as a command tool only. As an object oriented progr
 ---
 
 # Description CSV-File Structure
-The header of the CSV-File contains the first and last name of the player.
+The header of the CSV-File contains the first and last name of the player. Followed by game counter and total points
+the player. From the 5th colum on there are the dates of the game (in the header) and the points each player received.
+If the player does not took place in the game at that day, a "-" is inserted. An exmaple of the CSV-File can be in the following subchapter.
+
+> Note: The max number of rows is not set.
 #### Table View
 
 |   Name    | Surname  | Game Count | Total Points  | 17.04.2023 | 24.04.2023 | ... | 
