@@ -38,7 +38,7 @@ If the player does not took place in the game at that day, a "-" is inserted. An
 #### Table View
 
 |   Name    | Surname  | Game Count | Total Points  | 17.04.2023 | 24.04.2023 | ... | 
-| :------:  | :------: | :--------: | ------------- |---------- | ---------- | --- |
+| :------:  | :------: | :--------: | :-------------: |:----------: | :----------: | :---: |
 | Monsta    | Mane     | 0          | 0             | -         | -          | ... |
 | Sending   | Simba    | 2          | 14            | 2         | 12         | ... |
 | Afro      | Jack     | 1          | 3             | 3         | -          | ... |
