@@ -13,13 +13,11 @@ First it will be implemented as a command tool only. As an object oriented progr
 ### Class `Player`
 #### Data Members
 
-- `name_`
-    - stores the name of the player as an `std::string`.
-- `surname_`
-    - stores the surname of the player as an `std::string`.
-- `game_coutn_` counts the ammount of games the player played as an `uchar`.
-- `games_`
-    - stores the played games of the player as `std::vector<Games*>`.
+- `std::string name_`
+    - stores the name of the player.
+
+- `bool can_modify_ = false`
+    - A value which definies if the player is allowed to modify the statistics.
 
 > Note: Add comments for contructor, destructor... when implementing
 
@@ -32,16 +30,27 @@ recieved in each round of the game will be saved in `player_game_points_` . Also
 `date_`
 
 #### Data Members
-- `data_`
-    - stores the date of the game as an `int`
-- `player_game_points`
-    - stores the point of each round of the game for each player in a `std::map<Player*,std::vector<int>>`. As the key
-    of the map a pointer to the Player is used.The `std::vector<int>` represents the points of each round.
+- `int data_`
+    - stores the date of the game
+- `std::map<Player*,std::vector<int>> player_points`
+    - stores the point of each round of the game for each player in a . As the key of the map a pointer to the Player 
+    is used. In the vector the point for each round will be stored.
 
 #### Methods
 
+`showCGameStatistis()` --> shows the statistic of the current game.
+`comparePlayer()` --> takes in a list of players and shows them in a graph.
+
 > Note: Add comments for contructor, destructor... when implementing
 
+---
+
+### Class `GameEvent`
+This class is similar to the class `Game`, in here the ranking of the game will be computed.
+
+#### Datamembers
+- `std::map<Player*, std::int> ranking_` 
+    - save a pointer to the player and their ranking after the game ende.
 ---
 
 ## `Season.hpp` / `Season.cpp`
@@ -51,11 +60,10 @@ the `Season` class is implemented. It will habe two datamember, the first one `g
 and the second `seasons_` stores the man, start and end date of a season.
 
 #### Data Members
-- `games_`
-    - stores all games in a `std::vector<Game*>`
-- `seasons_`
-    - stores the name of the season as the key, and the start and end date as an integer into a vector
-    `std::map<std::string, std::vector<int>>`
+- `std::vector<GameEvent*> games_`
+    - stores all games.
+- `std::map<std::string, std::vector<int>> season_def_`
+    - stores the name of the season as the key, and the start and end date as an integer.
 
 ---
 # Utils
@@ -76,5 +84,5 @@ following subchapter.
 |   Name        | Game Count | Total Points  | 17.04.2023   | 24.04.2023    | ... | 
 | :------:      | :--------: | :-----------: | :----------: | :----------:  | :-: |
 | Monsta Mane   | 0          | 0             | -            | -             | ... |
-| Simba         | 2          | 14            | 2            | 12            | ... |
-| Afro Jack     | 1          | 3             | 3            | -             | ... |
+| Simba         | 2          | 2             | 1            | 1             | ... |
+| Afro Jack     | 1          | 2             | 2            | -             | ... |
