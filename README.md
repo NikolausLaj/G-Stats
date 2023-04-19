@@ -49,7 +49,7 @@ recieved in each round of the game will be saved in `player_game_points_` . Also
 This class is similar to the class `Game`, in here the ranking of the game will be computed.
 
 #### Datamembers
-- `std::map<Player*, std::int> ranking_` 
+- `std::map<Player*, int> ranking_` 
     - save a pointer to the player and their ranking after the game ende.
 ---
 
